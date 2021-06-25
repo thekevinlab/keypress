@@ -73,7 +73,7 @@ class KeyPress:
     def on_release(self, key) -> Any:
         key_type = self.get_key_type(key)
 
-        files = glob.glob('soundpack/{0}/down/*.mp3'.format(key_type))
+        files = glob.glob('soundpack/{0}/up/*.mp3'.format(key_type))
         playsound(random.choice(files), block=False)
 
         self.last_pressed = None
